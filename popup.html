@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Blocker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    
+    h3 {
+      color: #333;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .remove {
+      background-color: #f44336;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .remove:hover {
+      background-color: #d32f2f;
+    }
+
+  </style>
+</head>
+<body>
+  <h3>Blocked Sites</h3>
+  
+  <div class="input-container">
+    <input id="siteInput" type="text" placeholder="Enter site to block (e.g., example.com)">
+    <button id="addSite">Add</button>
+  </div>
+
+  <ul id="sitesList"></ul>
+  <br>
+  <script src="popup.js"></script>
+</body>
+</html>
